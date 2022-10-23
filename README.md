@@ -24,4 +24,6 @@ Relevant weather metadata include the following:
 15. solar irradiance
 16. dew point
 
-With the above data, I have put together a dataset of 132480 rows and 65 columns. This is a dataset of weather status for every 1 minute from 2021-06-01 00:00 to 2021-08-31 23:59. In order to achieve the purpose of the project, the dataset has been 
+With the above data, I have put together a dataset of 132480 rows and 65 columns. This is a dataset of weather status for every 1 minute from 2021-06-01 00:00 to 2021-08-31 23:59. In order to achieve the purpose of the project, the dataset has been filtered out to report every 10 minutes, therefore from 2021-06-01 00:00 to 2021-08-31 23:50. 
+  
+Then we used LSTM to render prediction. The number of input features is 7 and that of output classes is 3. The train data will be fed to the model with the batch size of 32 and the sequence length of 6. In other words, I will use the past 60 minutes of weather metadata to predict the next 10, 30, and 60 minutes of the given time. 
